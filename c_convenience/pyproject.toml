@@ -1,0 +1,10 @@
+[project]
+name = "c_convenience"
+version = "0.0.1"
+requires-python = ">=3.8"
+
+[project.scripts]
+c-compile = "c_convenience.c_running:c_compile"
+c-run = "c_convenience.c_running:c_run"
+c-template = "c_convenience.c_template:make_c_template"
+c-snippet = "c_convenience.c_snippet:make_c_snippet"

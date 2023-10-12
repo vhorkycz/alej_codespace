@@ -1,0 +1,4 @@
+{
+    "image":"mcr.microsoft.com/devcontainers/universal:2",
+    "postCreateCommand": "cd /workspaces/codespace_trial/c_convenience && pip install -e ."
+}
