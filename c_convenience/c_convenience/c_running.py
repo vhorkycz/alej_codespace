@@ -14,12 +14,17 @@ def _c_compile(source_path, output_path):
     """
     source_path assumed to exist
     """
+    with open(source_path) as file:
+        link_math = "<math.h>" in file.read()
+               
     compiling_cmd = [
         COMPILER,
         "--output", output_path,
         "-Wall",
         source_path,
         ]
+    if link_math:
+        compiling_cmd.insert(1, "-lm")
     print(f"INFO: running {' '.join(map(str, compiling_cmd))}")
     compiling_proc = subprocess.run(compiling_cmd)
     return compiling_proc.returncode
