@@ -1,5 +1,5 @@
 {
     "image":"mcr.microsoft.com/devcontainers/universal:2",
-    "postCreateCommand": "cd c_convenience && pip install --user -e .",
+    "postCreateCommand": "cd /workspaces/*/c_convenience && pip install --user -e .",
     "workspaceFolder": "/home/codespace"
 }
